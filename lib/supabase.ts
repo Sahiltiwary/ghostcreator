@@ -7,4 +7,8 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey)
+// supabaseAdmin should ONLY be used in Server Components or API Routes
+// It will be null in the browser to prevent leaking the Service Role Key
+export const supabaseAdmin = supabaseServiceKey 
+  ? createClient(supabaseUrl, supabaseServiceKey) 
+  : null;

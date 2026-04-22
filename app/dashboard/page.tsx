@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { UserButton } from "@clerk/nextjs";
+import { useAuth, UserButton } from "@clerk/nextjs";
+import { supabase } from "@/lib/supabase";
+import { useEffect, useState } from "react";
 import {
   Ghost,
   LayoutDashboard,
@@ -17,7 +17,25 @@ import {
 import Link from "next/link";
 
 export default function DashboardPage() {
+  const { userId } = useAuth();
+  const [userData, setUserData] = useState<{ name: string; credits: number } | null>(null);
   const [ghostMode, setGhostMode] = useState(false);
+
+  useEffect(() => {
+    if (userId) {
+      const fetchUser = async () => {
+        const { data, error } = await supabase
+          .from("users")
+          .select("name, credits")
+          .eq("user_id", userId)
+          .single();
+        
+        if (data) setUserData(data);
+      };
+      fetchUser();
+    }
+  }, [userId]);
+
   const accent = ghostMode ? "#bc13fe" : "#00f2ff";
   const accentAlpha = ghostMode
     ? "rgba(188,19,254,0.1)"
@@ -168,16 +186,30 @@ export default function DashboardPage() {
           <div>
             <h1 className="text-xl font-bold text-white">Dashboard</h1>
             <p className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
-              Welcome back, Ghost Creator
+              Welcome back, {userData?.name || "Ghost Creator"}
             </p>
           </div>
-          <UserButton
-            appearance={{
-              elements: {
-                avatarBox: "w-9 h-9 rounded-full",
-              },
-            }}
-          />
+          <div className="flex items-center gap-4">
+            <div 
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-bold transition-all"
+              style={{ 
+                borderColor: `${accent}30`, 
+                background: accentAlpha, 
+                color: accent,
+                boxShadow: ghostMode ? `0 0 10px ${accent}20` : "none"
+              }}
+            >
+              <Zap className="w-3.5 h-3.5" />
+              {userData?.credits ?? 0} Credits
+            </div>
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: `w-9 h-9 rounded-full ring-2 ring-[${accent}]/20 transition-all`,
+                },
+              }}
+            />
+          </div>
         </header>
 
         {/* Content */}
