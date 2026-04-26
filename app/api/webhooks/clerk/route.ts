@@ -79,6 +79,11 @@ export async function POST(req: Request) {
     // ── 3. Insert into Supabase users table (using service role key) ───────────
     console.log('Attempting to insert:', { user_id: clerk_id, email });
 
+    if (!supabaseAdmin) {
+      console.error("supabaseAdmin is not initialized — SUPABASE_SERVICE_ROLE_KEY is missing.");
+      return NextResponse.json({ error: "Server misconfiguration." }, { status: 500 });
+    }
+
     const { error } = await supabaseAdmin.from("users").insert({
       user_id: clerk_id,
       email: email,
