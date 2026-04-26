@@ -13,6 +13,7 @@ import {
   Tv2,          // YouTube placeholder
   Cctv,         // Instagram placeholder
   Zap,
+  Plus,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -67,7 +68,19 @@ export default function DashboardPage() {
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 px-4 py-6 space-y-1">
+        <nav className="flex-1 px-4 py-6 space-y-1 relative z-50">
+          {/* Create Button */}
+          <Link
+            href="/quasipoaru/create"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 mb-6 rounded-xl text-sm font-bold transition-all hover:scale-[1.02] active:scale-[0.98] text-black"
+            style={{
+              background: accent,
+              boxShadow: `0 0 20px ${accent}60`,
+            }}
+          >
+            <Plus className="w-5 h-5" />
+            Create New Series
+          </Link>
           {[
             { icon: LayoutDashboard, label: "Overview", href: "/dashboard", active: true },
             { icon: Video, label: "My Videos", href: "/dashboard/videos" },
