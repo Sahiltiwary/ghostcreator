@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import confetti from "canvas-confetti";
+import { useRouter } from "next/navigation";
 
 const YoutubeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" {...props}>
@@ -246,17 +247,52 @@ const CaptionPreview = ({ styleId }: { styleId: string }) => {
 };
 
 export default function CreateVideo() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
   const [playingPreview, setPlayingPreview] = useState<string | null>(null);
   const [audioError, setAudioError] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playingMusic, setPlayingMusic] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [editModeId, setEditModeId] = useState<string | null>(null);
 
   useEffect(() => {
     // Shared audio instance to prevent "Zombie Sound" (overlapping audio)
     if (!audioRef.current && typeof window !== "undefined") {
       audioRef.current = new Audio();
+      
+      const searchParams = new URLSearchParams(window.location.search);
+      const editId = searchParams.get("edit");
+      
+      if (editId) {
+        setEditModeId(editId);
+        fetch(`/api/series?id=${editId}`)
+          .then(res => {
+            if (!res.ok) throw new Error("Failed to fetch series");
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.id) {
+              setFormData({
+                niche: data.niche || "",
+                customNiche: data.custom_niche || "",
+                language: data.language || "English",
+                languageModel: data.language_model || "deepgram",
+                voice: data.voice_id || "",
+                duration: data.duration || "",
+                topic: data.topic || "",
+                bgMusic: data.bg_music_id || "",
+                style: data.video_style_id || "",
+                captionStyle: data.caption_style_id || "",
+                seriesName: data.series_name || "",
+                platforms: data.platforms || [],
+                scheduleTime: data.schedule_time || "",
+              });
+            }
+          })
+          .catch(err => console.error("Error loading series for edit:", err));
+      }
     }
 
     return () => {
@@ -287,6 +323,15 @@ export default function CreateVideo() {
     setPlayingPreview(null);
     setPlayingMusic(null);
   }, [currentStep]);
+
+  useEffect(() => {
+    if (currentStep === 7) {
+      const timer = setTimeout(() => {
+        router.push("/dashboard");
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [currentStep, router]);
 
   const playPreview = (previewFile: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -381,16 +426,39 @@ export default function CreateVideo() {
     scheduleTime: "",
   });
 
-  const handleNextStep = () => {
+  const handleNextStep = async () => {
     if (currentStep === 6) {
-      confetti({
-        particleCount: 150,
-        spread: 100,
-        origin: { y: 0.6 },
-        colors: ['#00f2fe', '#8b5cf6', '#bc13fe']
-      });
-    }
-    if (currentStep < 7) {
+      try {
+        setIsSubmitting(true);
+        const url = editModeId ? `/api/series?id=${editModeId}` : "/api/series";
+        const method = editModeId ? "PUT" : "POST";
+
+        const res = await fetch(url, {
+          method: method,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (!res.ok) {
+          throw new Error("Failed to save series");
+        }
+
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 },
+          colors: ['#00f2fe', '#8b5cf6', '#bc13fe']
+        });
+        
+        setDirection(1);
+        setCurrentStep(currentStep + 1);
+      } catch (error) {
+        console.error("Submission error:", error);
+        alert("Failed to schedule series. Please try again.");
+      } finally {
+        setIsSubmitting(false);
+      }
+    } else if (currentStep < 7) {
       setDirection(1);
       setCurrentStep(currentStep + 1);
     }
@@ -514,6 +582,14 @@ export default function CreateVideo() {
       {/* Sticky Header / Stepper */}
       <header className="absolute top-0 left-0 right-0 z-50 pt-8 px-8 bg-black/80 backdrop-blur-md pb-4 border-b border-white/5">
         <div className="max-w-5xl mx-auto">
+          {editModeId && (
+            <div className="mb-4 flex items-center justify-center">
+              <span className="px-4 py-1.5 rounded-full bg-[#8b5cf6]/10 border border-[#8b5cf6]/30 text-[#8b5cf6] text-xs font-black tracking-widest uppercase flex items-center gap-2 shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+                <div className="w-2 h-2 rounded-full bg-[#8b5cf6] animate-pulse" />
+                Editing Series: {formData.seriesName || "Loading..."}
+              </span>
+            </div>
+          )}
           <div className="flex gap-3">
             {[1, 2, 3, 4, 5, 6].map((step) => {
               const isActive = currentStep >= step;
@@ -1039,8 +1115,10 @@ export default function CreateVideo() {
                 className="w-full flex flex-col relative z-10"
               >
                 <div className="mb-8 text-center md:text-left shrink-0">
-                  <h1 className="text-4xl font-black mb-2 tracking-tight">Series Deployment</h1>
-                  <p className="text-white/50 text-lg">Step 6: Name your series and schedule its release.</p>
+                  <h1 className="text-4xl font-black mb-2 tracking-tight">
+                    {editModeId ? "Update Deployment" : "Series Deployment"}
+                  </h1>
+                  <p className="text-white/50 text-lg">Step 6: {editModeId ? "Update your series settings and schedule." : "Name your series and schedule its release."}</p>
                 </div>
 
                 <div className="flex-1 min-h-0 flex flex-col gap-6">
@@ -1177,7 +1255,7 @@ export default function CreateVideo() {
 
             <button
               onClick={handleNextStep}
-              disabled={!isStepValid()}
+              disabled={!isStepValid() || isSubmitting}
               className={cn(
                 "flex items-center gap-2 px-5 py-2 text-black font-bold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none relative group overflow-hidden",
                 currentStep === 6 
@@ -1185,12 +1263,16 @@ export default function CreateVideo() {
                   : "bg-cyan-400 hover:bg-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] disabled:hover:bg-cyan-400"
               )}
             >
-              {currentStep === 6 && (
+              {currentStep === 6 && !isSubmitting && (
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               )}
               <span className="relative z-10 flex items-center gap-2">
-                {currentStep === 6 ? "Schedule Series" : (currentStep === 5 ? "Finalize Series" : "Continue")}
-                <ArrowRight className="w-4 h-4" />
+                {isSubmitting 
+                  ? (editModeId ? "Updating..." : "Scheduling...") 
+                  : (currentStep === 6 
+                      ? (editModeId ? "Update Series" : "Schedule Series") 
+                      : (currentStep === 5 ? "Finalize Series" : "Continue"))}
+                {!isSubmitting && <ArrowRight className="w-4 h-4" />}
               </span>
             </button>
           </div>
