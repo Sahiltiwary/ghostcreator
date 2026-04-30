@@ -1,0 +1,1257 @@
+{
+  "words": [
+    {
+      "word": "imagine",
+      "start": 0.39999998,
+      "end": 0.79999995,
+      "confidence": 0.99902344,
+      "punctuated_word": "Imagine"
+    },
+    {
+      "word": "a",
+      "start": 0.79999995,
+      "end": 0.96,
+      "confidence": 0.99902344,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "jagged",
+      "start": 0.96,
+      "end": 1.46,
+      "confidence": 1,
+      "punctuated_word": "jagged"
+    },
+    {
+      "word": "rock",
+      "start": 1.52,
+      "end": 1.76,
+      "confidence": 1,
+      "punctuated_word": "rock"
+    },
+    {
+      "word": "in",
+      "start": 1.76,
+      "end": 1.92,
+      "confidence": 1,
+      "punctuated_word": "in"
+    },
+    {
+      "word": "the",
+      "start": 1.92,
+      "end": 2,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "middle",
+      "start": 2,
+      "end": 2.32,
+      "confidence": 1,
+      "punctuated_word": "middle"
+    },
+    {
+      "word": "of",
+      "start": 2.32,
+      "end": 2.48,
+      "confidence": 1,
+      "punctuated_word": "of"
+    },
+    {
+      "word": "a",
+      "start": 2.48,
+      "end": 2.56,
+      "confidence": 1,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "violent",
+      "start": 2.56,
+      "end": 3.04,
+      "confidence": 1,
+      "punctuated_word": "violent"
+    },
+    {
+      "word": "ocean",
+      "start": 3.04,
+      "end": 3.52,
+      "confidence": 1,
+      "punctuated_word": "ocean"
+    },
+    {
+      "word": "where",
+      "start": 3.52,
+      "end": 3.76,
+      "confidence": 0.94384766,
+      "punctuated_word": "where"
+    },
+    {
+      "word": "the",
+      "start": 3.76,
+      "end": 3.9199998,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "only",
+      "start": 3.9199998,
+      "end": 4.24,
+      "confidence": 1,
+      "punctuated_word": "only"
+    },
+    {
+      "word": "source",
+      "start": 4.24,
+      "end": 4.48,
+      "confidence": 1,
+      "punctuated_word": "source"
+    },
+    {
+      "word": "of",
+      "start": 4.48,
+      "end": 4.64,
+      "confidence": 1,
+      "punctuated_word": "of"
+    },
+    {
+      "word": "light",
+      "start": 4.64,
+      "end": 4.96,
+      "confidence": 1,
+      "punctuated_word": "light"
+    },
+    {
+      "word": "suddenly",
+      "start": 4.96,
+      "end": 5.46,
+      "confidence": 1,
+      "punctuated_word": "suddenly"
+    },
+    {
+      "word": "just",
+      "start": 5.52,
+      "end": 5.68,
+      "confidence": 1,
+      "punctuated_word": "just"
+    },
+    {
+      "word": "goes",
+      "start": 5.68,
+      "end": 6,
+      "confidence": 1,
+      "punctuated_word": "goes"
+    },
+    {
+      "word": "out",
+      "start": 6,
+      "end": 6.5,
+      "confidence": 0.99194336,
+      "punctuated_word": "out."
+    },
+    {
+      "word": "december",
+      "start": 6.72,
+      "end": 7.22,
+      "confidence": 0.99902344,
+      "punctuated_word": "December"
+    },
+    {
+      "word": "'19",
+      "start": 7.3599997,
+      "end": 7.7599998,
+      "confidence": 0.9970703,
+      "punctuated_word": "'19"
+    },
+    {
+      "word": "hundred",
+      "start": 7.7599998,
+      "end": 8.26,
+      "confidence": 0.94750977,
+      "punctuated_word": "hundred."
+    },
+    {
+      "word": "three",
+      "start": 8.88,
+      "end": 9.2,
+      "confidence": 1,
+      "punctuated_word": "Three"
+    },
+    {
+      "word": "lighthouse",
+      "start": 9.2,
+      "end": 9.679999,
+      "confidence": 0.99902344,
+      "punctuated_word": "lighthouse"
+    },
+    {
+      "word": "keepers",
+      "start": 9.679999,
+      "end": 10.16,
+      "confidence": 0.982666,
+      "punctuated_word": "keepers"
+    },
+    {
+      "word": "vanish",
+      "start": 10.16,
+      "end": 10.559999,
+      "confidence": 0.76660156,
+      "punctuated_word": "vanish"
+    },
+    {
+      "word": "from",
+      "start": 10.559999,
+      "end": 10.8,
+      "confidence": 1,
+      "punctuated_word": "from"
+    },
+    {
+      "word": "a",
+      "start": 10.8,
+      "end": 10.88,
+      "confidence": 1,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "remote",
+      "start": 10.88,
+      "end": 11.28,
+      "confidence": 1,
+      "punctuated_word": "remote"
+    },
+    {
+      "word": "island",
+      "start": 11.28,
+      "end": 11.679999,
+      "confidence": 0.9921875,
+      "punctuated_word": "island"
+    },
+    {
+      "word": "in",
+      "start": 11.679999,
+      "end": 11.84,
+      "confidence": 1,
+      "punctuated_word": "in"
+    },
+    {
+      "word": "scotland",
+      "start": 11.84,
+      "end": 12.34,
+      "confidence": 1,
+      "punctuated_word": "Scotland"
+    },
+    {
+      "word": "without",
+      "start": 12.4,
+      "end": 12.719999,
+      "confidence": 1,
+      "punctuated_word": "without"
+    },
+    {
+      "word": "a",
+      "start": 12.719999,
+      "end": 12.88,
+      "confidence": 1,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "single",
+      "start": 12.88,
+      "end": 13.28,
+      "confidence": 1,
+      "punctuated_word": "single"
+    },
+    {
+      "word": "trace",
+      "start": 13.28,
+      "end": 13.78,
+      "confidence": 1,
+      "punctuated_word": "trace."
+    },
+    {
+      "word": "when",
+      "start": 14.375,
+      "end": 14.615,
+      "confidence": 1,
+      "punctuated_word": "When"
+    },
+    {
+      "word": "the",
+      "start": 14.615,
+      "end": 14.695,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "supply",
+      "start": 14.695,
+      "end": 15.175,
+      "confidence": 0.99609375,
+      "punctuated_word": "supply"
+    },
+    {
+      "word": "ship",
+      "start": 15.175,
+      "end": 15.495,
+      "confidence": 0.9980469,
+      "punctuated_word": "ship"
+    },
+    {
+      "word": "finally",
+      "start": 15.495,
+      "end": 15.975,
+      "confidence": 1,
+      "punctuated_word": "finally"
+    },
+    {
+      "word": "arrived",
+      "start": 15.975,
+      "end": 16.455,
+      "confidence": 0.99902344,
+      "punctuated_word": "arrived,"
+    },
+    {
+      "word": "the",
+      "start": 16.455,
+      "end": 16.615,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "scene",
+      "start": 16.615,
+      "end": 16.855,
+      "confidence": 1,
+      "punctuated_word": "scene"
+    },
+    {
+      "word": "was",
+      "start": 16.855,
+      "end": 17.095,
+      "confidence": 1,
+      "punctuated_word": "was"
+    },
+    {
+      "word": "chilling",
+      "start": 17.095,
+      "end": 17.595,
+      "confidence": 1,
+      "punctuated_word": "chilling."
+    },
+    {
+      "word": "the",
+      "start": 18.135,
+      "end": 18.295,
+      "confidence": 1,
+      "punctuated_word": "The"
+    },
+    {
+      "word": "door",
+      "start": 18.295,
+      "end": 18.535,
+      "confidence": 1,
+      "punctuated_word": "door"
+    },
+    {
+      "word": "was",
+      "start": 18.535,
+      "end": 18.695,
+      "confidence": 1,
+      "punctuated_word": "was"
+    },
+    {
+      "word": "locked",
+      "start": 18.695,
+      "end": 19.095,
+      "confidence": 1,
+      "punctuated_word": "locked"
+    },
+    {
+      "word": "from",
+      "start": 19.095,
+      "end": 19.255001,
+      "confidence": 1,
+      "punctuated_word": "from"
+    },
+    {
+      "word": "the",
+      "start": 19.255001,
+      "end": 19.415,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "inside",
+      "start": 19.415,
+      "end": 19.915,
+      "confidence": 0.99902344,
+      "punctuated_word": "inside."
+    },
+    {
+      "word": "a",
+      "start": 20.455,
+      "end": 20.695,
+      "confidence": 1,
+      "punctuated_word": "A"
+    },
+    {
+      "word": "chair",
+      "start": 20.695,
+      "end": 21.015,
+      "confidence": 1,
+      "punctuated_word": "chair"
+    },
+    {
+      "word": "was",
+      "start": 21.015,
+      "end": 21.175,
+      "confidence": 1,
+      "punctuated_word": "was"
+    },
+    {
+      "word": "knocked",
+      "start": 21.175,
+      "end": 21.494999,
+      "confidence": 1,
+      "punctuated_word": "knocked"
+    },
+    {
+      "word": "over",
+      "start": 21.494999,
+      "end": 21.994999,
+      "confidence": 1,
+      "punctuated_word": "over."
+    },
+    {
+      "word": "the",
+      "start": 22.375,
+      "end": 22.615,
+      "confidence": 1,
+      "punctuated_word": "The"
+    },
+    {
+      "word": "clock",
+      "start": 22.615,
+      "end": 22.935,
+      "confidence": 1,
+      "punctuated_word": "clock"
+    },
+    {
+      "word": "had",
+      "start": 22.935,
+      "end": 23.175,
+      "confidence": 1,
+      "punctuated_word": "had"
+    },
+    {
+      "word": "stopped",
+      "start": 23.175,
+      "end": 23.494999,
+      "confidence": 1,
+      "punctuated_word": "stopped"
+    },
+    {
+      "word": "ticking",
+      "start": 23.494999,
+      "end": 23.994999,
+      "confidence": 1,
+      "punctuated_word": "ticking."
+    },
+    {
+      "word": "even",
+      "start": 24.615,
+      "end": 24.935,
+      "confidence": 1,
+      "punctuated_word": "Even"
+    },
+    {
+      "word": "stranger",
+      "start": 24.935,
+      "end": 25.435,
+      "confidence": 0.9926758,
+      "punctuated_word": "stranger,"
+    },
+    {
+      "word": "the",
+      "start": 25.494999,
+      "end": 25.654999,
+      "confidence": 0.99902344,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "logbook",
+      "start": 25.654999,
+      "end": 26.055,
+      "confidence": 0.9555664,
+      "punctuated_word": "logbook"
+    },
+    {
+      "word": "entry",
+      "start": 26.055,
+      "end": 26.455,
+      "confidence": 1,
+      "punctuated_word": "entry"
+    },
+    {
+      "word": "describes",
+      "start": 26.455,
+      "end": 26.935,
+      "confidence": 1,
+      "punctuated_word": "describes"
+    },
+    {
+      "word": "a",
+      "start": 26.935,
+      "end": 27.095,
+      "confidence": 0.9970703,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "storm",
+      "start": 27.095,
+      "end": 27.415,
+      "confidence": 1,
+      "punctuated_word": "storm"
+    },
+    {
+      "word": "that",
+      "start": 27.415,
+      "end": 27.654999,
+      "confidence": 1,
+      "punctuated_word": "that"
+    },
+    {
+      "word": "never",
+      "start": 27.654999,
+      "end": 27.974998,
+      "confidence": 1,
+      "punctuated_word": "never"
+    },
+    {
+      "word": "actually",
+      "start": 27.974998,
+      "end": 28.375,
+      "confidence": 1,
+      "punctuated_word": "actually"
+    },
+    {
+      "word": "happened",
+      "start": 28.375,
+      "end": 28.875,
+      "confidence": 1,
+      "punctuated_word": "happened."
+    },
+    {
+      "word": "they",
+      "start": 29.51,
+      "end": 29.75,
+      "confidence": 1,
+      "punctuated_word": "They"
+    },
+    {
+      "word": "wrote",
+      "start": 29.75,
+      "end": 29.91,
+      "confidence": 0.99902344,
+      "punctuated_word": "wrote"
+    },
+    {
+      "word": "about",
+      "start": 29.91,
+      "end": 30.39,
+      "confidence": 1,
+      "punctuated_word": "about"
+    },
+    {
+      "word": "screaming",
+      "start": 30.39,
+      "end": 30.79,
+      "confidence": 1,
+      "punctuated_word": "screaming"
+    },
+    {
+      "word": "winds",
+      "start": 30.79,
+      "end": 31.19,
+      "confidence": 1,
+      "punctuated_word": "winds"
+    },
+    {
+      "word": "and",
+      "start": 31.19,
+      "end": 31.43,
+      "confidence": 0.96777344,
+      "punctuated_word": "and"
+    },
+    {
+      "word": "men",
+      "start": 31.43,
+      "end": 31.75,
+      "confidence": 1,
+      "punctuated_word": "men"
+    },
+    {
+      "word": "praying",
+      "start": 31.75,
+      "end": 32.07,
+      "confidence": 1,
+      "punctuated_word": "praying"
+    },
+    {
+      "word": "in",
+      "start": 32.07,
+      "end": 32.31,
+      "confidence": 0.9980469,
+      "punctuated_word": "in"
+    },
+    {
+      "word": "terror",
+      "start": 32.31,
+      "end": 32.71,
+      "confidence": 1,
+      "punctuated_word": "terror"
+    },
+    {
+      "word": "while",
+      "start": 32.71,
+      "end": 32.95,
+      "confidence": 0.9863281,
+      "punctuated_word": "while"
+    },
+    {
+      "word": "the",
+      "start": 32.95,
+      "end": 33.11,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "weather",
+      "start": 33.11,
+      "end": 33.43,
+      "confidence": 1,
+      "punctuated_word": "weather"
+    },
+    {
+      "word": "outside",
+      "start": 33.43,
+      "end": 33.83,
+      "confidence": 1,
+      "punctuated_word": "outside"
+    },
+    {
+      "word": "was",
+      "start": 33.83,
+      "end": 34.07,
+      "confidence": 1,
+      "punctuated_word": "was"
+    },
+    {
+      "word": "calm",
+      "start": 34.07,
+      "end": 34.57,
+      "confidence": 0.9995117,
+      "punctuated_word": "calm."
+    },
+    {
+      "word": "was",
+      "start": 35.03,
+      "end": 35.19,
+      "confidence": 1,
+      "punctuated_word": "Was"
+    },
+    {
+      "word": "it",
+      "start": 35.19,
+      "end": 35.35,
+      "confidence": 1,
+      "punctuated_word": "it"
+    },
+    {
+      "word": "a",
+      "start": 35.35,
+      "end": 35.510002,
+      "confidence": 1,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "rogue",
+      "start": 35.510002,
+      "end": 35.83,
+      "confidence": 1,
+      "punctuated_word": "rogue"
+    },
+    {
+      "word": "wave",
+      "start": 35.83,
+      "end": 36.15,
+      "confidence": 1,
+      "punctuated_word": "wave"
+    },
+    {
+      "word": "that",
+      "start": 36.15,
+      "end": 36.39,
+      "confidence": 1,
+      "punctuated_word": "that"
+    },
+    {
+      "word": "swept",
+      "start": 36.39,
+      "end": 36.71,
+      "confidence": 1,
+      "punctuated_word": "swept"
+    },
+    {
+      "word": "them",
+      "start": 36.71,
+      "end": 36.87,
+      "confidence": 1,
+      "punctuated_word": "them"
+    },
+    {
+      "word": "into",
+      "start": 36.87,
+      "end": 37.03,
+      "confidence": 0.99902344,
+      "punctuated_word": "into"
+    },
+    {
+      "word": "the",
+      "start": 37.03,
+      "end": 37.27,
+      "confidence": 0.99609375,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "abyss",
+      "start": 37.27,
+      "end": 37.77,
+      "confidence": 0.814209,
+      "punctuated_word": "abyss,"
+    },
+    {
+      "word": "or",
+      "start": 38.15,
+      "end": 38.39,
+      "confidence": 1,
+      "punctuated_word": "or"
+    },
+    {
+      "word": "did",
+      "start": 38.39,
+      "end": 38.63,
+      "confidence": 1,
+      "punctuated_word": "did"
+    },
+    {
+      "word": "something",
+      "start": 38.63,
+      "end": 38.95,
+      "confidence": 1,
+      "punctuated_word": "something"
+    },
+    {
+      "word": "else",
+      "start": 38.95,
+      "end": 39.27,
+      "confidence": 1,
+      "punctuated_word": "else"
+    },
+    {
+      "word": "crawl",
+      "start": 39.27,
+      "end": 39.59,
+      "confidence": 1,
+      "punctuated_word": "crawl"
+    },
+    {
+      "word": "out",
+      "start": 39.59,
+      "end": 39.75,
+      "confidence": 1,
+      "punctuated_word": "out"
+    },
+    {
+      "word": "of",
+      "start": 39.75,
+      "end": 39.83,
+      "confidence": 1,
+      "punctuated_word": "of"
+    },
+    {
+      "word": "the",
+      "start": 39.83,
+      "end": 39.989998,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "dark",
+      "start": 39.989998,
+      "end": 40.31,
+      "confidence": 1,
+      "punctuated_word": "dark"
+    },
+    {
+      "word": "water",
+      "start": 40.31,
+      "end": 40.63,
+      "confidence": 1,
+      "punctuated_word": "water"
+    },
+    {
+      "word": "that",
+      "start": 40.63,
+      "end": 40.87,
+      "confidence": 1,
+      "punctuated_word": "that"
+    },
+    {
+      "word": "night",
+      "start": 40.87,
+      "end": 41.37,
+      "confidence": 0.9980469,
+      "punctuated_word": "night?"
+    },
+    {
+      "word": "some",
+      "start": 41.59,
+      "end": 41.91,
+      "confidence": 1,
+      "punctuated_word": "Some"
+    },
+    {
+      "word": "say",
+      "start": 41.91,
+      "end": 42.07,
+      "confidence": 1,
+      "punctuated_word": "say"
+    },
+    {
+      "word": "they",
+      "start": 42.07,
+      "end": 42.31,
+      "confidence": 0.99902344,
+      "punctuated_word": "they"
+    },
+    {
+      "word": "lost",
+      "start": 42.31,
+      "end": 42.63,
+      "confidence": 1,
+      "punctuated_word": "lost"
+    },
+    {
+      "word": "their",
+      "start": 42.63,
+      "end": 42.79,
+      "confidence": 1,
+      "punctuated_word": "their"
+    },
+    {
+      "word": "minds",
+      "start": 42.79,
+      "end": 43.11,
+      "confidence": 1,
+      "punctuated_word": "minds"
+    },
+    {
+      "word": "to",
+      "start": 43.11,
+      "end": 43.27,
+      "confidence": 1,
+      "punctuated_word": "to"
+    },
+    {
+      "word": "the",
+      "start": 43.27,
+      "end": 43.35,
+      "confidence": 0.9951172,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "isolation",
+      "start": 43.35,
+      "end": 43.85,
+      "confidence": 0.9980469,
+      "punctuated_word": "isolation."
+    },
+    {
+      "word": "others",
+      "start": 44.835003,
+      "end": 45.075,
+      "confidence": 1,
+      "punctuated_word": "Others"
+    },
+    {
+      "word": "whisper",
+      "start": 45.075,
+      "end": 45.475002,
+      "confidence": 1,
+      "punctuated_word": "whisper"
+    },
+    {
+      "word": "about",
+      "start": 45.475002,
+      "end": 45.795002,
+      "confidence": 1,
+      "punctuated_word": "about"
+    },
+    {
+      "word": "ancient",
+      "start": 45.795002,
+      "end": 46.115,
+      "confidence": 0.9980469,
+      "punctuated_word": "ancient"
+    },
+    {
+      "word": "ocean",
+      "start": 46.115,
+      "end": 46.515,
+      "confidence": 1,
+      "punctuated_word": "ocean"
+    },
+    {
+      "word": "gods",
+      "start": 46.515,
+      "end": 46.915,
+      "confidence": 0.9951172,
+      "punctuated_word": "gods"
+    },
+    {
+      "word": "reclaiming",
+      "start": 46.915,
+      "end": 47.395,
+      "confidence": 0.99853516,
+      "punctuated_word": "reclaiming"
+    },
+    {
+      "word": "their",
+      "start": 47.395,
+      "end": 47.715,
+      "confidence": 1,
+      "punctuated_word": "their"
+    },
+    {
+      "word": "territory",
+      "start": 47.715,
+      "end": 48.215,
+      "confidence": 1,
+      "punctuated_word": "territory."
+    },
+    {
+      "word": "the",
+      "start": 48.915,
+      "end": 49.075,
+      "confidence": 1,
+      "punctuated_word": "The"
+    },
+    {
+      "word": "lighthouse",
+      "start": 49.075,
+      "end": 49.575,
+      "confidence": 0.99902344,
+      "punctuated_word": "lighthouse"
+    },
+    {
+      "word": "stands",
+      "start": 49.635002,
+      "end": 49.955,
+      "confidence": 1,
+      "punctuated_word": "stands"
+    },
+    {
+      "word": "empty",
+      "start": 49.955,
+      "end": 50.355,
+      "confidence": 1,
+      "punctuated_word": "empty"
+    },
+    {
+      "word": "now",
+      "start": 50.355,
+      "end": 50.595,
+      "confidence": 0.9460449,
+      "punctuated_word": "now,"
+    },
+    {
+      "word": "but",
+      "start": 50.595,
+      "end": 50.755,
+      "confidence": 1,
+      "punctuated_word": "but"
+    },
+    {
+      "word": "if",
+      "start": 50.755,
+      "end": 50.835,
+      "confidence": 1,
+      "punctuated_word": "if"
+    },
+    {
+      "word": "you",
+      "start": 50.835,
+      "end": 50.995003,
+      "confidence": 1,
+      "punctuated_word": "you"
+    },
+    {
+      "word": "visit",
+      "start": 50.995003,
+      "end": 51.315002,
+      "confidence": 1,
+      "punctuated_word": "visit"
+    },
+    {
+      "word": "on",
+      "start": 51.315002,
+      "end": 51.475002,
+      "confidence": 1,
+      "punctuated_word": "on"
+    },
+    {
+      "word": "a",
+      "start": 51.475002,
+      "end": 51.555,
+      "confidence": 1,
+      "punctuated_word": "a"
+    },
+    {
+      "word": "foggy",
+      "start": 51.555,
+      "end": 52.035,
+      "confidence": 1,
+      "punctuated_word": "foggy"
+    },
+    {
+      "word": "night",
+      "start": 52.035,
+      "end": 52.515,
+      "confidence": 0.99853516,
+      "punctuated_word": "night,"
+    },
+    {
+      "word": "some",
+      "start": 52.515,
+      "end": 52.755,
+      "confidence": 1,
+      "punctuated_word": "some"
+    },
+    {
+      "word": "claim",
+      "start": 52.755,
+      "end": 53.075,
+      "confidence": 1,
+      "punctuated_word": "claim"
+    },
+    {
+      "word": "you",
+      "start": 53.075,
+      "end": 53.235,
+      "confidence": 0.9902344,
+      "punctuated_word": "you"
+    },
+    {
+      "word": "can",
+      "start": 53.235,
+      "end": 53.475002,
+      "confidence": 1,
+      "punctuated_word": "can"
+    },
+    {
+      "word": "still",
+      "start": 53.475002,
+      "end": 53.715,
+      "confidence": 1,
+      "punctuated_word": "still"
+    },
+    {
+      "word": "hear",
+      "start": 53.715,
+      "end": 54.035,
+      "confidence": 1,
+      "punctuated_word": "hear"
+    },
+    {
+      "word": "three",
+      "start": 54.035,
+      "end": 54.275,
+      "confidence": 1,
+      "punctuated_word": "three"
+    },
+    {
+      "word": "voices",
+      "start": 54.275,
+      "end": 54.755,
+      "confidence": 1,
+      "punctuated_word": "voices"
+    },
+    {
+      "word": "singing",
+      "start": 54.755,
+      "end": 55.075,
+      "confidence": 1,
+      "punctuated_word": "singing"
+    },
+    {
+      "word": "in",
+      "start": 55.075,
+      "end": 55.155,
+      "confidence": 1,
+      "punctuated_word": "in"
+    },
+    {
+      "word": "the",
+      "start": 55.155,
+      "end": 55.315002,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "wind",
+      "start": 55.315002,
+      "end": 55.815002,
+      "confidence": 1,
+      "punctuated_word": "wind."
+    },
+    {
+      "word": "we",
+      "start": 56.355,
+      "end": 56.515,
+      "confidence": 1,
+      "punctuated_word": "We"
+    },
+    {
+      "word": "may",
+      "start": 56.515,
+      "end": 56.755,
+      "confidence": 1,
+      "punctuated_word": "may"
+    },
+    {
+      "word": "never",
+      "start": 56.755,
+      "end": 57.075,
+      "confidence": 1,
+      "punctuated_word": "never"
+    },
+    {
+      "word": "know",
+      "start": 57.075,
+      "end": 57.235,
+      "confidence": 1,
+      "punctuated_word": "know"
+    },
+    {
+      "word": "what",
+      "start": 57.235,
+      "end": 57.475002,
+      "confidence": 1,
+      "punctuated_word": "what"
+    },
+    {
+      "word": "happened",
+      "start": 57.475002,
+      "end": 57.795002,
+      "confidence": 1,
+      "punctuated_word": "happened"
+    },
+    {
+      "word": "on",
+      "start": 57.795002,
+      "end": 58.035,
+      "confidence": 1,
+      "punctuated_word": "on"
+    },
+    {
+      "word": "that",
+      "start": 58.035,
+      "end": 58.195,
+      "confidence": 1,
+      "punctuated_word": "that"
+    },
+    {
+      "word": "rock",
+      "start": 58.195,
+      "end": 58.47294,
+      "confidence": 0.99902344,
+      "punctuated_word": "rock."
+    },
+    {
+      "word": "maybe",
+      "start": 58.952938,
+      "end": 59.19294,
+      "confidence": 1,
+      "punctuated_word": "Maybe"
+    },
+    {
+      "word": "some",
+      "start": 59.19294,
+      "end": 59.51294,
+      "confidence": 1,
+      "punctuated_word": "some"
+    },
+    {
+      "word": "mysteries",
+      "start": 59.51294,
+      "end": 59.99294,
+      "confidence": 1,
+      "punctuated_word": "mysteries"
+    },
+    {
+      "word": "are",
+      "start": 59.99294,
+      "end": 60.072937,
+      "confidence": 1,
+      "punctuated_word": "are"
+    },
+    {
+      "word": "meant",
+      "start": 60.072937,
+      "end": 60.31294,
+      "confidence": 1,
+      "punctuated_word": "meant"
+    },
+    {
+      "word": "to",
+      "start": 60.31294,
+      "end": 60.47294,
+      "confidence": 1,
+      "punctuated_word": "to"
+    },
+    {
+      "word": "stay",
+      "start": 60.47294,
+      "end": 60.79294,
+      "confidence": 0.99902344,
+      "punctuated_word": "stay"
+    },
+    {
+      "word": "buried",
+      "start": 60.79294,
+      "end": 61.112938,
+      "confidence": 1,
+      "punctuated_word": "buried"
+    },
+    {
+      "word": "in",
+      "start": 61.112938,
+      "end": 61.272938,
+      "confidence": 0.9980469,
+      "punctuated_word": "in"
+    },
+    {
+      "word": "the",
+      "start": 61.272938,
+      "end": 61.432938,
+      "confidence": 1,
+      "punctuated_word": "the"
+    },
+    {
+      "word": "deep",
+      "start": 61.432938,
+      "end": 61.84794,
+      "confidence": 0.99902344,
+      "punctuated_word": "deep."
+    }
+  ]
+}
