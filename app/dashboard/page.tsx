@@ -22,6 +22,7 @@ import {
   Image as ImageIcon
 } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,6 +41,7 @@ const VIDEO_STYLES: Record<string, string> = {
 
 export default function DashboardPage() {
   const { userId } = useAuth();
+  const router = useRouter();
   const [userData, setUserData] = useState<{ name: string; credits: number } | null>(null);
   const [ghostMode, setGhostMode] = useState(false);
   const [userSeries, setUserSeries] = useState<any[]>([]);
@@ -60,7 +62,8 @@ export default function DashboardPage() {
       const fetchSeries = async () => {
         setLoadingSeries(true);
         try {
-          const res = await fetch("/api/series");
+          // Add cache-busting timestamp to prevent stale data
+          const res = await fetch(`/api/series?t=${Date.now()}`, { cache: "no-store" });
           if (!res.ok) throw new Error("API error");
           
           const data = await res.json();
@@ -85,6 +88,31 @@ export default function DashboardPage() {
       fetchSeries();
     }
   }, [userId]);
+
+  const handleGenerate = async (seriesId: string) => {
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ seriesId }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to trigger generation");
+      }
+
+      router.push("/dashboard/videos");
+    } catch (error) {
+      console.error("Generate error:", error);
+      alert("Failed to start generation. Please try again.");
+    }
+  };
+
+  const handleEdit = (seriesId: string) => {
+    router.push(`/quasipoaru/create?edit=${seriesId}`);
+  };
 
   const accent = ghostMode ? "#bc13fe" : "#00f2ff";
   const accentAlpha = ghostMode
@@ -364,9 +392,9 @@ export default function DashboardPage() {
                     
                     {/* Top Right Quick Actions */}
                     <div className="absolute top-4 right-4 flex items-center gap-2">
-                      <Link href={`/quasipoaru/create?edit=${series.id}`} className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white">
+                      <button onClick={() => handleEdit(series.id)} className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white outline-none">
                         <Edit2 className="w-4 h-4" />
-                      </Link>
+                      </button>
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <button className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white outline-none">
@@ -375,9 +403,9 @@ export default function DashboardPage() {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="bg-zinc-950 border-white/10 text-white min-w-[180px]">
                           <DropdownMenuItem asChild className="focus:bg-white/10 gap-2 cursor-pointer font-medium">
-                            <Link href={`/quasipoaru/create?edit=${series.id}`}>
-                              <Edit2 className="w-4 h-4" /> Edit Series
-                            </Link>
+                            <button onClick={() => handleEdit(series.id)} className="w-full flex items-center">
+                              <Edit2 className="w-4 h-4 mr-2" /> Edit Series
+                            </button>
                           </DropdownMenuItem>
                           <DropdownMenuItem className="focus:bg-white/10 gap-2 cursor-pointer font-medium">
                             {series.status === "active" ? <Pause className="w-4 h-4 text-yellow-500" /> : <Play className="w-4 h-4 text-green-500" />} 
@@ -403,6 +431,7 @@ export default function DashboardPage() {
                       <ImageIcon className="w-4 h-4" /> View Generated Clips
                     </button>
                     <button 
+                      onClick={() => handleGenerate(series.id)}
                       className="w-full flex items-center justify-center gap-2 py-3 rounded-xl transition-all text-sm font-bold text-black group relative overflow-hidden"
                       style={{
                         background: accent,

@@ -327,7 +327,7 @@ export default function CreateVideo() {
   useEffect(() => {
     if (currentStep === 7) {
       const timer = setTimeout(() => {
-        router.push("/dashboard");
+        window.location.href = "/dashboard";
       }, 4000);
       return () => clearTimeout(timer);
     }

@@ -59,6 +59,17 @@ export async function POST(req: Request) {
       .select()
       .single();
 
+    if (!error && data) {
+      // Deduct 1 credit from user
+      const { data: user } = await supabaseAdmin.from("users").select("credits").eq("user_id", userId).single();
+      if (user && user.credits > 0) {
+        await supabaseAdmin.from("users").update({ credits: user.credits - 1 }).eq("user_id", userId);
+      } else if (!user) {
+        // If user doesn't exist in db yet (webhook failed or local testing), create them with default 9 credits (10 - 1)
+        await supabaseAdmin.from("users").insert({ user_id: userId, email: "unknown@ghostcreator.com", credits: 9 });
+      }
+    }
+
     if (error) {
       console.error("[SERIES_POST] Supabase Error:", error);
       return new NextResponse("Database error", { status: 500 });
